@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
-import { mens_kurta } from "../../../Data/mens_kurta";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const HomeSectionCarosel = () => {
+const HomeSectionCarosel = ({data, sectionName}) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -25,13 +24,16 @@ const HomeSectionCarosel = () => {
     },
   };
 
-  const items = mens_kurta
+  const items = data
     .slice(0, 10)
     .map((item) => <HomeSectionCard product={item} />);
 
   return (
-    <div className="relative p-5 border">
-      <Carousel responsive={responsive}>{items}</Carousel>
+    <div className="border">
+      <h2 className="text-2xl font-extrabold text-gray-800 py-5">{sectionName}</h2>
+      <div className="relative p-5">
+        <Carousel responsive={responsive}>{items}</Carousel>
+      </div>
     </div>
   );
 };

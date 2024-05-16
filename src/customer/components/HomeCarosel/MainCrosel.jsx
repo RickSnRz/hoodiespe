@@ -5,7 +5,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 
 const MainCrosel = () => {
 
-    const items = mainCaroselData.map((item) => <img className='cursor-pointer' 
+    const items = mainCaroselData.map((item) => <img className='cursor-pointer -z-10' 
     role='presentation' src={item.image} alt=""/>)
 
 
