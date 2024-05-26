@@ -17,6 +17,7 @@ const HomeSectionCard = ({ product }) => {
         <p className="mt-2 text-sm text-gray-500">
           {product.title} 
         </p>
+        <h4 className="py-2 text-gray-950 font-medium text-lg">S/{product.price} </h4>
       </div>
     </div>
   );
